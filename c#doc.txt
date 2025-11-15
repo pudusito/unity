@@ -1,0 +1,6 @@
+C#
+
+descargar entorno .NET ----> .NET SDK  en google. v8
+
+dotnet new console .
+dotnet run
