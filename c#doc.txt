@@ -1,6 +1,33 @@
 C#
 
-descargar entorno .NET ----> .NET SDK  en google. v8
+descargar entorno .NET ----> .NET SDK  en google. v8 (Sistema Operativo)
 
+uso de c# en consola(no usado en unity, solo para c# code)
 dotnet new console .
 dotnet run
+
+---------------------------------------
+#|||||||||||||||||||||||||||||||||
+-------------------------------------
+en la parte izquierda de la pantalla, jerarquia, tenemos los elementos que renderiza la escena principal
+
+
+----------------------------------------
+EN ASSETS:
+debemos crear los siguientes file:
+sprites
+scripts
+animations
+
+para codigo:
+se crea un archivo c# igual que una carpeta(click derecho), y luego se arrastra a su jerarquia
+
+en la jerarquia creamos:
+Personaje(2d>sprite>square)
+Ground(2d>tilemap>rectangular) (el grid que se crea son las celdas, se puede ajustar los parametros como cell size)
+menu_superior>windows>2d>tilemap palette(Arrastramos y lo colocamos en el ide)
+creamos new palette con un folder dentro de assets
+
+
+
+
