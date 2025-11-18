@@ -26,7 +26,22 @@ en la jerarquia creamos:
 Personaje(2d>sprite>square)
 Ground(2d>tilemap>rectangular) (el grid que se crea son las celdas, se puede ajustar los parametros como cell size)
 menu_superior>windows>2d>tilemap palette(Arrastramos y lo colocamos en el ide)
-creamos new palette con un folder dentro de assets
+creamos new palette con un folder dentro de assets. podemos dejar varios mapas dentro de grid. 
+editamos en sprite editor para slice
+en tipe palette. la parte superior es el tarjet en la jerarquia, y abajo muetra el palette de project
+
+windows >pagackemanager
+para las imagenes sprites en pixel art, inspector>
+spritemode: multiple
+para los mapas: pixel per unit: 16
+filter mode: point(no filter)
+compression:none
+
+
+en personaje:
+CREAR rigidbody(cuerpo fisico para el mesh) y colliders(coliciones)
+
+en mapa: crear componente tilemap collider 2d y composite collider 2d(marcar used by composite si usamos composite)
 
 
 
