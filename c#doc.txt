@@ -11,6 +11,8 @@ dotnet run
 -------------------------------------
 en la parte izquierda de la pantalla, jerarquia, tenemos los elementos que renderiza la escena principal
 
+PARA CODIGO:
+se crea un archivo c# igual que una carpeta(click derecho), y luego se arrastra a su jerarquia. monobehavior script
 
 ----------------------------------------
 EN ASSETS:
@@ -19,23 +21,27 @@ sprites
 scripts
 animations
 
-para codigo:
-se crea un archivo c# igual que una carpeta(click derecho), y luego se arrastra a su jerarquia
-
-en la jerarquia creamos:
+EN JERARQUIA:
 Personaje(2d>sprite>square)
 Ground(2d>tilemap>rectangular) (el grid que se crea son las celdas, se puede ajustar los parametros como cell size)
 menu_superior>windows>2d>tilemap palette(Arrastramos y lo colocamos en el ide)
 creamos new palette con un folder dentro de assets. podemos dejar varios mapas dentro de grid. 
 editamos en sprite editor para slice
 en tipe palette. la parte superior es el tarjet en la jerarquia, y abajo muetra el palette de project
-
 windows >pagackemanager
-para las imagenes sprites en pixel art, inspector>
+
+PARA TILES, MODIFICAR TILE EN INSPECTOR
+creamos una carpeta TILES
+dentro una carpeta PALETTES
+dentro palettes cada tile tendra una carpeta propia 
+para las imagenes sprites en pixel art, 
+inspector>
 spritemode: multiple
 para los mapas: pixel per unit: 16
 filter mode: point(no filter)
 compression:none
+
+LUEGO SPRITE EDITOR Y TILE PALETTE
 
 
 en personaje:
@@ -43,6 +49,33 @@ CREAR rigidbody(cuerpo fisico para el mesh) y colliders(coliciones)
 
 en mapa: crear componente tilemap collider 2d y composite collider 2d(marcar used by composite si usamos composite)
 
+añadirle player input
+
+crear el monobehavior de c# para movement y enlazarlo a jerarquia
+
+player movement active handle input, activar en FILE> BUILD PROFFILE
+> en la esquina superior derecha: player setting. y en others buscar el active handle input y ponerlo en both
+
+añadir mas animaciones al mismo controller, animation. abajo de preview, create new clip
 
 
+nota: tener seleccionado el personaje para añadirle animation.
+
+
+nota para añadir suelo:
+seleccionamos el tilemap. en inspector. arriba a la derecha, creamos una nueva layer, nombre suelo. luego seleccionamos a nuestro personaje y linkiamos el layer creado con el rigidbody, para evitar que el personaje se de vuelta, debemos fijar el eje Z del rigidbody en constrair, en el mismo rigidbody del personaje 
+
+
+ejemplo consolelog en C#: Debug.Log("moneda recogida");
+nota: LA D Y L SON MAYUS.
+
+
+para hacer que nuestra camara siga a nuestro personaje usaremos cinemachine. windows>package manager>>unity registrary>Cinemachine>install
+luego en jerarquia. right click > cinemachine > 2d camera
+dentro de cinemachinevirtualcamera >  arrastramos el player a Follow(tracking target)
+
+
+luego arrastramos los sprites de background a una carpeta llamada scenes.
+para que se vean todas las capas, hay que en inspector usar sorting layers. seleccionamos nuestro background inicial, y en inspector > additional setting > sorting layer.  creamos un layer para cada.
+luego de crear las layers, ir a la jerarquia de cada imagen y en inspector > sorting layer seleccionamos la creada para cada uno
 
