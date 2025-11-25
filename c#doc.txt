@@ -79,3 +79,6 @@ luego arrastramos los sprites de background a una carpeta llamada scenes.
 para que se vean todas las capas, hay que en inspector usar sorting layers. seleccionamos nuestro background inicial, y en inspector > additional setting > sorting layer.  creamos un layer para cada.
 luego de crear las layers, ir a la jerarquia de cada imagen y en inspector > sorting layer seleccionamos la creada para cada uno
 
+
+
+en las condiciones del animator, le damos de iddle a run una flecha para mov izq y otra para derecho, en ambos desmarcamos (en inspector seleccionando la flecha doble y moviendonos en transitions) has exit time. y luego añadimos una condicion para cada transition: less -0.1 y grater 0.1 , luego añadimos otra coneccion de run a iddle un less 0.1 y greater -0.1
